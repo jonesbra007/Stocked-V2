@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-bg-color: var(--bg-color);
+  --color-card-bg: var(--card-bg);
+  --color-nav-bg: var(--nav-bg);
+  --color-text-main: var(--text-main);
+  --color-text-light: var(--text-light);
+  --color-today-blue: var(--today-blue);
+  --color-input-bg: var(--input-bg);
+  --color-slot-bg: var(--slot-bg);
+  --color-hover-bg: var(--hover-bg);
+  --color-border-color: var(--border-color);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-dm-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-crimson: var(--font-crimson), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --shadow-soft: 0 4px 20px rgba(0,0,0,0.05);
+  --shadow-soft-dark: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+:root {
+  --bg-color: #F9F7F2;
+  --card-bg: #FFFFFF;
+  --nav-bg: rgba(249, 247, 242, 0.95);
+  --primary: #5C8D89;
+  --primary-dark: #416B67;
+  --accent: #D97D5D;
+  --text-main: #2C3333;
+  --text-light: #7E8A8A;
+  --danger: #e74c3c;
+  --today-blue: #5C8D89; 
+  --border-radius: 16px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.05);
+  --border: 1px solid #E6E2DA;
+  --border-color: #E6E2DA;
+  --input-bg: #FFFFFF;
+  --slot-bg: #F7F5F0;
+  --hover-bg: #EBE8E0;
+  --scroll-track: #f1f1f1;
+  --scroll-thumb: #c1c1c1;
+  --bottom-nav-height: 70px;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --card-bg: #1E1E1E;
+  --nav-bg: rgba(18, 18, 18, 0.95);
+  --primary: #5C8D89;
+  --primary-dark: #4A7A76;
+  --accent: #E08E70;
+  --text-main: #E0E0E0;
+  --text-light: #A0A0A0;
+  --danger: #ff6b6b;
+  --today-blue: #5C8D89; 
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --border: 1px solid #333333;
+  --border-color: #333333;
+  --input-bg: #2C2C2C;
+  --slot-bg: #252525;
+  --hover-bg: #333333;
+  --scroll-track: #2a2a2a;
+  --scroll-thumb: #555;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  padding-bottom: 90px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+  border: 2px solid var(--bg-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
